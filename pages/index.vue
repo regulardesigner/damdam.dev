@@ -1,0 +1,47 @@
+<template>
+  <div>
+    <Header class="header"/>
+    <ul>
+      <li v-for="article in articles" :key="article.slug" class="article-list">
+        <nuxt-link class="article-link" :to="{ name: 'blog-slug', params: { slug: article.slug }}">
+          <h2 class="title">{{ article.title }}</h2>
+          <p class="description">&#10149; {{ article.description }}</p>
+        </nuxt-link>
+      </li>
+    </ul>
+  </div>
+</template>
+
+<script>
+export default {
+  async asyncData({ $content, params }) {
+    const articles = await $content('articles')
+    .only(['title', 'description', 'slug'])
+    .sortBy('createdAt', 'desc')
+    .fetch()
+
+    return {
+      articles
+    }
+  }
+}
+</script>
+
+<style>
+.article-link {
+  padding-bottom: 2rem;
+  display: block;
+  text-decoration: none;
+  transition: all 250ms;
+}
+
+.article-link:hover {
+  background-color: rgba(255,255,255, .05);
+  border-radius: 1.8rem;
+  padding: 1rem 4rem 3rem 4rem;
+}
+
+.description {
+  font-size: 1.6rem;
+}
+</style>
