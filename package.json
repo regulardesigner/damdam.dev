@@ -1,6 +1,7 @@
 {
+  "homepage": "https://regulardesigner.github.io/damdamdam",
   "name": "damdamdam",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "dev": "nuxt",
