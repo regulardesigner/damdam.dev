@@ -1,5 +1,5 @@
 <template>
   <header>
-    <h1>damdamdam.dev</h1>
+    <h1>damdam.dev</h1>
   </header>
 </template>
