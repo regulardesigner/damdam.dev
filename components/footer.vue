@@ -1,6 +1,6 @@
 <template>
   <footer>
-    damdamdam - written with &hearts; and a keyboard.
+    damdam.dev - écrit avec &hearts; et un clavier.
   </footer>
 </template>
 
