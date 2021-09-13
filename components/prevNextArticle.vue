@@ -6,7 +6,7 @@
       class="prev"
       :title="prev.title"
     >
-      Previous <span class="curved-arrrow down-left">&#10150;</span>
+      Précédent <span class="curved-arrrow down-left">&#10150;</span>
     </NuxtLink>
     <span v-else>&nbsp;</span>
     <NuxtLink
@@ -15,7 +15,7 @@
       class="next"
       :title="next.title"
     >
-      <span class="curved-arrrow up-right">&#10149;</span> Next
+      <span class="curved-arrrow up-right">&#10149;</span> Suivant
     </NuxtLink>
     <span v-else>&nbsp;</span>
   </nav>
