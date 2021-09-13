@@ -6,14 +6,14 @@ export default {
   target: 'static',
 
   router: {
-    base: '/damdamdam/'
+    base: ''
   },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'damdamdam',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'fr'
     },
     meta: [
       { charset: 'utf-8' },
