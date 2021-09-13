@@ -23,6 +23,17 @@ export default {
     return {
       articles
     }
+  },
+
+  head() {
+    return {
+      link: [
+        {
+          rel: 'canonical',
+          href: `https://www.damdam.dev${this.$route.path}`
+        }
+      ]
+    }
   }
 }
 </script>

@@ -1,10 +1,13 @@
 <template>
   <div>
-    <header><a href="/">back to the home page</a></header>
+    <header>
+      <a href="/">Retour accueil</a>
+    </header>
+
     <article>
       <h1>{{ article.title }}</h1>
       <p>{{ article.description }}</p>
-      <p>post created at {{ article.updatedAt }}</p>
+      <p>Publié le : {{ publicationDate(article.updatedAt) }}</p>
       <nuxt-content :document="article" />
 
       <prev-next-article :prev="prev" :next="next" />
@@ -25,6 +28,24 @@ export default {
       .fetch()
 
       return { article, prev, next }
+    },
+
+  head() {
+    return {
+      link: [
+        {
+          rel: 'canonical',
+          href: `https://www.damdam.dev${this.$route.path}`
+        }
+      ]
     }
+  },
+
+  methods: {
+    publicationDate(date) {
+      const publicationDate = new Date(date)
+      return new Intl.DateTimeFormat('fr-FR').format(publicationDate)
+    }
+  }
 }
 </script>
