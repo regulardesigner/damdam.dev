@@ -1,5 +1,5 @@
 ---
-title: My second blog post on damdamdam.dev
+title: My second blog post on damdam.dev
 description: Oh yeah it's my second blog post here! 🎉
 ---
 

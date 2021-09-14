@@ -1,5 +1,5 @@
 ---
-title: My first blog post on damdamdam.dev
+title: My first blog post on damdam.dev
 description: Because it's never too late to start a new career 👋 .
 ---
 
