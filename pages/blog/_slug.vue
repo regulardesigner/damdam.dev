@@ -5,9 +5,9 @@
     </header>
 
     <article>
-      <h1>{{ article.title }}</h1>
+      <h1>{{ article.title }} <small class="category">{{ article.category }}</small></h1>
       <p>{{ article.description }}</p>
-      <p>Publié le : {{ publicationDate(article.updatedAt) }}</p>
+      <p>Publié le : {{ publicationDate(article.createdAt) }}</p>
       <nuxt-content :document="article" />
 
       <prev-next-article :prev="prev" :next="next" />
@@ -22,7 +22,7 @@ export default {
       const article = await $content('articles', params.slug).fetch()
 
       const [prev, next] = await $content('articles')
-      .only(['title', 'slug'])
+      .only(['title', 'slug', 'category'])
       .sortBy('createdAt', 'asc')
       .surround(params.slug)
       .fetch()
@@ -49,3 +49,13 @@ export default {
   }
 }
 </script>
+
+<style>
+.category {
+  font-size: 1.4rem;
+  background-color: #f0f0f0;
+  color: #262a36;
+  padding: .4rem;
+  border-radius: 0.4rem;
+}
+</style>

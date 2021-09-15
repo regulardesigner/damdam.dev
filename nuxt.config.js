@@ -11,7 +11,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'damdamdam',
+    title: 'damdam.dev le blog de Damien',
     htmlAttrs: {
       lang: 'fr'
     },
