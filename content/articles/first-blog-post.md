@@ -1,6 +1,7 @@
 ---
-title: My first blog post on damdamdam.dev
+title: My first blog post on damdam.dev
 description: Because it's never too late to start a new career 👋 .
+category: blog
 ---
 
 ## My first blog post ever

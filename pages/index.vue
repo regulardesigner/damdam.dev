@@ -23,6 +23,17 @@ export default {
     return {
       articles
     }
+  },
+
+  head() {
+    return {
+      link: [
+        {
+          rel: 'canonical',
+          href: `https://www.damdam.dev${this.$route.path}`
+        }
+      ]
+    }
   }
 }
 </script>
@@ -35,7 +46,8 @@ export default {
   transition: all 250ms;
 }
 
-.article-link:hover {
+.article-link:hover,
+.article-link:focus {
   background-color: rgba(255,255,255, .05);
   border-radius: 1.8rem;
   padding: 1rem 4rem 3rem 4rem;
@@ -43,5 +55,16 @@ export default {
 
 .description {
   font-size: 1.6rem;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .article-link,
+  .article-link:hover,
+  .article-link:focus {
+    background-color: rgba(255,255,255, .05);
+    border-radius: 1.8rem;
+    padding: .6rem 2rem 2rem 2rem;
+    margin-bottom: 2rem;
+  }
 }
 </style>
