@@ -21,8 +21,6 @@ export default {
     .sortBy('createdAt', 'desc')
     .fetch()
 
-    console.log(notes)
-
     return {
       notes
     }
