@@ -1,30 +1,16 @@
 <template>
   <div>
-    <Header class="header"/>
-    <ul>
-      <li v-for="article in articles" :key="article.slug" class="article-list">
-        <nuxt-link class="article-link" :to="{ name: 'blog-slug', params: { slug: article.slug }}">
-          <h2 class="title">{{ article.title }}</h2>
-          <p class="description">&#10149; {{ article.description }}</p>
-        </nuxt-link>
-      </li>
-    </ul>
+    <article class="presentation">
+      <h1>Hi there,</h1>
+      <h2>I'm Damien and I'm a Front-end Developer at <a target="_blank" href="https://www.youboox.fr">Youboox</a>.</h2>
+      <h2>I'm keen on writing accessible HTML and gorgeous CSS packed with a nice touch of JavaScript!</h2>
+      <p>here you can <a href="/blog">read my blog posts</a> and <a href="/notes">my notes</a>.</p>
+    </article>
   </div>
 </template>
 
 <script>
 export default {
-  async asyncData({ $content, params }) {
-    const articles = await $content('articles')
-    .only(['title', 'description', 'slug'])
-    .sortBy('createdAt', 'desc')
-    .fetch()
-
-    return {
-      articles
-    }
-  },
-
   head() {
     return {
       link: [
@@ -37,34 +23,3 @@ export default {
   }
 }
 </script>
-
-<style>
-.article-link {
-  padding-bottom: 2rem;
-  display: block;
-  text-decoration: none;
-  transition: all 250ms;
-}
-
-.article-link:hover,
-.article-link:focus {
-  background-color: rgba(255,255,255, .05);
-  border-radius: 1.8rem;
-  padding: 1rem 4rem 3rem 4rem;
-}
-
-.description {
-  font-size: 1.6rem;
-}
-
-@media (hover: none) and (pointer: coarse) {
-  .article-link,
-  .article-link:hover,
-  .article-link:focus {
-    background-color: rgba(255,255,255, .05);
-    border-radius: 1.8rem;
-    padding: .6rem 2rem 2rem 2rem;
-    margin-bottom: 2rem;
-  }
-}
-</style>

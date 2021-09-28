@@ -5,10 +5,10 @@
     </header>
 
     <article>
-      <h1>{{ article.title }} <small class="category">{{ article.category }}</small></h1>
-      <p>{{ article.description }}</p>
-      <p>Publié le : {{ publicationDate(article.createdAt) }}</p>
-      <nuxt-content :document="article" />
+      <h1>{{ note.title }} <small class="category">{{ note.category }}</small></h1>
+      <p>{{ note.description }}</p>
+      <p>Publié le : {{ publicationDate(note.createdAt) }}</p>
+      <nuxt-content :document="note" />
 
       <prev-next-article :prev="prev" :next="next" />
     </article>
@@ -18,16 +18,16 @@
 <script>
 export default {
   async asyncData({ $content, params }) {
-      // fetch our article here
-      const article = await $content('articles', params.slug).fetch()
+      // fetch our notes here
+      const note = await $content('notes', params.slug).fetch()
 
-      const [prev, next] = await $content('articles')
+      const [prev, next] = await $content('notes')
       .only(['title', 'slug', 'category'])
       .sortBy('createdAt', 'asc')
       .surround(params.slug)
       .fetch()
 
-      return { article, prev, next }
+      return { note, prev, next }
     },
 
   head() {

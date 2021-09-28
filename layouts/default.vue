@@ -28,6 +28,11 @@ body {
 
 .default {
   padding: 1.4rem 2rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 a {
