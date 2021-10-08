@@ -17,6 +17,8 @@
 
 <script>
 export default {
+  layout: 'blog',
+
   async asyncData({ $content, params }) {
       // fetch our notes here
       const note = await $content('notes', params.slug).fetch()

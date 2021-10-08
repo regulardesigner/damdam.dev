@@ -1,7 +1,6 @@
 <template>
     <div class="default">
       <nuxt/>
-      <Footer class="footer"/>
     </div>
 </template>
 
@@ -37,6 +36,18 @@ body {
 
 a {
   color: #f0f0f0;
+  transition: all 350ms linear;
+}
+
+.home-link {
+  text-decoration: none;
+  border-bottom: dotted thin #f0f0f0;
+}
+
+.home-link:hover {
+  border-bottom: dotted thin transparent;
+  color: #262a36;
+  box-shadow: inset 0 -100px 0 #dfd481;
 }
 
 h1 {
@@ -51,6 +62,20 @@ h2 {
 
 h1,h2,h3,h4,h5,h6 {
   font-family: 'Ultra', serif;
+}
+
+.open-sans {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+.mb-3 {
+  margin-bottom: 3rem;
+}
+.mb-4 {
+  margin-bottom: 4rem;
 }
 
 @media (min-width: 576px) {
