@@ -1,9 +1,10 @@
 <template>
   <div>
     <article class="presentation">
-      <h1>Hi there 👋</h1>
-      <h2 class="mb-3">I'm Damien and I'm a Front-end Developer at Youboox.</h2>
-      <h3 class="open-sans mb-2">I'm keen on writing accessible HTML and gorgeous CSS packed with a nice touch of JavaScript!</h3>
+      <h1>Hello there 👋 I'm Damien</h1>
+      <h2 class="mb-1">JS Front-end Developer at Nextory.</h2>
+      <p class="mb-3 italic stroke">ex Youboox, Webibli, Augment, S4M, Mediaconnect, backflip, Epcom</p>
+      <h3 class="text-current mb-2">I'm keen on writing accessible web pages packed with a reasonable touch of JavaScript!</h3>
       <p>Here you can <a class="home-link" href="/blog">read my posts about what I learn</a> and <a class="home-link" href="/notes">my notes</a>.</p>
     </article>
   </div>

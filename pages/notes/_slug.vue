@@ -1,7 +1,7 @@
 <template>
   <div>
     <header>
-      <Navigation />
+      <navigation />
     </header>
 
     <article>

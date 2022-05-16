@@ -1,7 +1,6 @@
 <template>
   <div>
-    <Header class="header"/>
-    <Navigation />
+    <navigation />
     <ul>
       <li v-for="article in articles" :key="article.slug" class="article-list">
         <nuxt-link class="article-link" :to="{ name: 'blog-slug', params: { slug: article.slug }}">
@@ -49,11 +48,8 @@ export default {
   transition: all 250ms;
 }
 
-.article-link:hover,
-.article-link:focus {
-  background-color: rgba(255,255,255, .05);
-  border-radius: 1.8rem;
-  padding: 1rem 4rem 3rem 4rem;
+.article-link:hover .title {
+  text-decoration: underline;
 }
 
 .description {

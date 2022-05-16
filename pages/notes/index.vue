@@ -1,7 +1,6 @@
 <template>
   <div>
-    <Header class="header"/>
-    <Navigation />
+    <navigation />
     <ul>
       <li v-for="note in notes" :key="note.slug" class="note-list">
         <nuxt-link class="note-link" :to="{ name: 'notes-slug', params: { slug: note.slug }}">
@@ -49,13 +48,7 @@ export default {
   transition: all 250ms;
 }
 
-.note-link:hover {
-  background-color: rgba(255,255,255, .05);
-  border-radius: 1.8rem;
-  padding: 1rem 4rem 3rem 4rem;
-}
-
 .description {
-  font-size: 1.6rem;
+  /* font-size: 1.6rem; */
 }
 </style>
