@@ -5,10 +5,13 @@
     </header>
 
     <article>
-      <h1>{{ article.title }} <small class="category">{{ article.category }}</small></h1>
+      <h1 class="article-title">{{ article.title }} <small class="category">{{ article.category }}</small></h1>
+
       <p>{{ article.description }}</p>
-      <p>Publié le : {{ publicationDate(article.createdAt) }}</p>
+
       <nuxt-content :document="article" />
+
+      <small>Published: {{ publicationDate(article.createdAt) }}</small>
 
       <prev-next-article :prev="prev" :next="next" />
     </article>
@@ -53,6 +56,13 @@ export default {
 </script>
 
 <style>
+.article-title {
+  border: 4px solid white;
+  padding: 1.4rem;
+  margin-bottom: 2rem;
+  border-image:   linear-gradient(45deg, #f8546b 25%, #ffdb60 50%, #00a093 100%) 100;
+}
+
 .category {
   font-size: 1.4rem;
   background-color: #f0f0f0;

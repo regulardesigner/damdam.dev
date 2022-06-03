@@ -1,6 +1,6 @@
 <template>
   <nav class="navigation">
-    <h1 class="navigation__head-title">Damdam.dev</h1>
+    <h1 class="navigation__head-title">damdam.dev</h1>
     <ul class="navigation-list">
       <li class="navigation-item"><a class="navigation-link home-link" href="/">home</a></li>
       <li class="navigation-item"><a class="navigation-link home-link" href="/blog">articles</a></li>
@@ -14,13 +14,12 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin: 1rem 0;
-  text-align: right;
+  margin: 2rem 0 4rem 0;
 }
 
 .navigation__head-title {
   display: inline-block;
-  font-size: 2.4rem;
+  font-size: 2rem;
 }
 
 .navigation-item {

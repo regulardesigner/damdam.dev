@@ -2,20 +2,20 @@
   <nav class="prev-next-section">
     <NuxtLink
       v-if="prev"
-      :to="{ name: 'blog-slug', params: { slug: prev.slug } }"
+      :to="{ params: { slug: prev.slug } }"
       class="prev"
       :title="prev.title"
     >
-      Précédent <span class="curved-arrrow down-left">&#10150;</span>
+      Previous <span class="curved-arrrow down-left">&#10150;</span>
     </NuxtLink>
     <span v-else>&nbsp;</span>
     <NuxtLink
       v-if="next"
-      :to="{ name: 'blog-slug', params: { slug: next.slug } }"
+      :to="{ params: { slug: next.slug } }"
       class="next"
       :title="next.title"
     >
-      <span class="curved-arrrow up-right">&#10149;</span> Suivant
+      <span class="curved-arrrow up-right">&#10149;</span> Next
     </NuxtLink>
     <span v-else>&nbsp;</span>
   </nav>
