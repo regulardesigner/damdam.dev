@@ -11,14 +11,40 @@ export default {
 </script>
 
 <style>
-/* latin */
+/* outfit-regular - latin */
 @font-face {
   font-family: 'Outfit';
-  src: url(https://fonts.gstatic.com/s/outfit/v4/QGYvz_MVcBeNP4NJtEtqUYLknw.woff2) format('woff2');
-  font-weight: 100 900;
+  font-style: normal;
+  font-weight: 400;
   font-display: swap;
+  -webkit-font-smooth: never;
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  src: url('~assets/fonts/outfit-v6-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('~assets/fonts/outfit-v6-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('~assets/fonts/outfit-v6-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('~assets/fonts/outfit-v6-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('~assets/fonts/outfit-v6-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('~assets/fonts/outfit-v6-latin-regular.svg#Outfit') format('svg'); /* Legacy iOS */
 }
+
+/* outfit-900 - latin */
+@font-face {
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  -webkit-font-smooth: never;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  src: url('~assets/fonts/outfit-v6-latin-900.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('~assets/fonts/outfit-v6-latin-900.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('~assets/fonts/outfit-v6-latin-900.woff2') format('woff2'), /* Super Modern Browsers */
+       url('~assets/fonts/outfit-v6-latin-900.woff') format('woff'), /* Modern Browsers */
+       url('~assets/fonts/outfit-v6-latin-900.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('~assets/fonts/outfit-v6-latin-900.svg#Outfit') format('svg'); /* Legacy iOS */
+}
+
 
 html {
   font-size: .625em; /* fallback IE8+ */
