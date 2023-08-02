@@ -5,6 +5,8 @@
       <li class="navigation-item"><a class="navigation-link home-link" href="/">home</a></li>
       <li class="navigation-item"><a class="navigation-link home-link" href="/blog">articles</a></li>
       <li class="navigation-item"><a class="navigation-link home-link" href="/notes">notes</a></li>
+      <li class="navigation-item"><a class="navigation-link home-link" href="/how-i-read-it">how I read it</a></li>
+      <li class="navigation-item"><a class="navigation-link home-link" href="/timeline">timeline</a></li>
     </ul>
   </nav>
 </template>
