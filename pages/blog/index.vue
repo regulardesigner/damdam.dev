@@ -1,5 +1,6 @@
 <template>
   <div>
+    <navigation />
     <ul>
       <li v-for="article in articles" :key="article.slug" class="article-list">
         <nuxt-link class="article-link" :to="{ name: 'blog-slug', params: { slug: article.slug }}">
@@ -8,7 +9,6 @@
         </nuxt-link>
       </li>
     </ul>
-    <navigation />
   </div>
 </template>
 

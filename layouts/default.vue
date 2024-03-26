@@ -1,14 +1,9 @@
 <template>
     <div class="default">
+      <themes-checkbox />
       <nuxt/>
     </div>
 </template>
-
-<script>
-export default {
-
-}
-</script>
 
 <style>
 /* outfit-regular - latin */
@@ -52,9 +47,9 @@ html {
 }
 
 body {
-  background: #262a36;
+  background: var(--background-color);
   font-size: 1.6rem;
-  color: #f0f0f0;
+  color: var(--text-color);
   font-family: 'Outfit', sans-serif;
   font-weight: 400;
 }
@@ -79,18 +74,17 @@ body {
 }
 
 a {
-  color: #f0f0f0;
-  transition: all 350ms linear;
+  color: var(--text-color);
 }
 
 .home-link {
   text-decoration: none;
-  border-bottom: dotted thin #f0f0f0;
+  border-bottom: dotted thin var(--text-color);
 }
 
 .home-link:hover {
   border-bottom: dotted thin transparent;
-  color: #262a36;
+  color: var(--text-color);
   box-shadow: inset 0 -100px 0 #dfd481;
 }
 

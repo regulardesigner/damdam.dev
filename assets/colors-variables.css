@@ -1,0 +1,15 @@
+:root {
+  /* Light Theme */
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --background-color: #f8f9fa;
+  --text-color: #212529;
+}
+
+body:has(input#theme-toggle[type="checkbox"]:checked) {
+  /* Dark Theme */
+  --primary-color: #6c757d;
+  --secondary-color: #007bff;
+  --background-color: #212529;
+  --text-color: #f8f9fa;
+}

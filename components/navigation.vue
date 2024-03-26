@@ -8,6 +8,7 @@
       <li class="navigation-item"><a class="navigation-link home-link" href="/how-i-read-it">how I read it</a></li>
       <li class="navigation-item"><a class="navigation-link home-link" href="/timeline">timeline</a></li>
     </ul>
+    <themes-checkbox />
   </nav>
 </template>
 
