@@ -36,21 +36,26 @@ export default {
     },
 
     getCookie(name) {
+      // Append "=" to the cookie name
       const nameEQ = name + "=";
       // Split the document.cookie string into an array of individual cookie strings
       const ca = document.cookie.split(';');
-      for(let i=0;i < ca.length;i++) {
-        let c = ca[i];
-        // Trim any leading spaces from the cookie string
-        while (c.charAt(0) === ' ') c = c.substring(1,c.length);
-        // If the cookie string starts with the name we're looking for
-        if (c.indexOf(nameEQ) === 0)
-          // Return the value of the cookie (the part of the string after the '=')
-          return c.substring(nameEQ.length,c.length);
+      // Find the cookie that starts with the name we're looking for
+      const cookie = ca.find(c => {
+        return c.trim().startsWith(nameEQ);
+      });
+
+
+      // If the cookie is found
+      if (cookie) {
+        // Return the value of the cookie (the part of the string after the '=')
+        return cookie.substring(nameEQ.length + 1);
       }
-      // If the cookie with the provided name is not found, create it with 'dark' as the default value
+      // If the cookie with the provided name is not found, set a default value
       const defaultValue = 'dark';
+      // Set a cookie with the provided name, the default value, and an expiration of 365 days
       this.setCookie(name, defaultValue, 365);
+      // Return the default value
       return defaultValue;
     }
   }
