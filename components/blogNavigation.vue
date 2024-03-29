@@ -1,9 +1,9 @@
 <template>
   <nav class="navigation">
     <ul class="navigation-list">
-      <li class="navigation-item"><a class="navigation-link" href="/">home</a></li>
-      <li class="navigation-item"><a class="navigation-link" href="/blog">articles</a></li>
-      <li class="navigation-item"><a class="navigation-link" href="/notes">notes</a></li>
+      <li class="navigation-item"><router-link to="/">home</router-link></li>
+      <li class="navigation-item"><router-link to="/blog">articles</router-link></li>
+      <li class="navigation-item"><router-link to="/notes">notes</router-link></li>
     </ul>
   </nav>
 </template>

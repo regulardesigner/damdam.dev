@@ -2,11 +2,11 @@
   <nav class="navigation">
     <h1 class="navigation__head-title">damdam.dev</h1>
     <ul class="navigation-list">
-      <li class="navigation-item"><a class="navigation-link home-link" href="/">home</a></li>
-      <li class="navigation-item"><a class="navigation-link home-link" href="/blog">articles</a></li>
-      <li class="navigation-item"><a class="navigation-link home-link" href="/notes">notes</a></li>
-      <li class="navigation-item"><a class="navigation-link home-link" href="/how-i-read-it">how I read it</a></li>
-      <li class="navigation-item"><a class="navigation-link home-link" href="/timeline">timeline</a></li>
+      <li class="navigation-item"><router-link class="navigation-link home-link" to="/">home</router-link></li>
+      <li class="navigation-item"><router-link class="navigation-link home-link" to="/blog">articles</router-link></li>
+      <li class="navigation-item"><router-link class="navigation-link home-link" to="/notes">notes</router-link></li>
+      <li class="navigation-item"><router-link class="navigation-link home-link" to="/how-i-read-it">how I read it</router-link></li>
+      <li class="navigation-item"><router-link class="navigation-link home-link" to="/timeline">timeline</router-link></li>
     </ul>
     <themes-checkbox />
   </nav>

@@ -22,8 +22,12 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }
-    ]
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght,BNCE,INFM,SPAC@0,300..800,-20,60,61.5;1,300..800,-20,60,61.5&display=swap'
+      }
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css

@@ -6,41 +6,6 @@
 </template>
 
 <style>
-/* outfit-regular - latin */
-@font-face {
-  font-family: 'Outfit';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  -webkit-font-smooth: never;
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-  src: url('~assets/fonts/outfit-v6-latin-regular.eot'); /* IE9 Compat Modes */
-  src: local(''),
-       url('~assets/fonts/outfit-v6-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('~assets/fonts/outfit-v6-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('~assets/fonts/outfit-v6-latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('~assets/fonts/outfit-v6-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('~assets/fonts/outfit-v6-latin-regular.svg#Outfit') format('svg'); /* Legacy iOS */
-}
-
-/* outfit-900 - latin */
-@font-face {
-  font-family: 'Outfit';
-  font-style: normal;
-  font-weight: 900;
-  font-display: swap;
-  -webkit-font-smooth: never;
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-  src: url('~assets/fonts/outfit-v6-latin-900.eot'); /* IE9 Compat Modes */
-  src: local(''),
-       url('~assets/fonts/outfit-v6-latin-900.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('~assets/fonts/outfit-v6-latin-900.woff2') format('woff2'), /* Super Modern Browsers */
-       url('~assets/fonts/outfit-v6-latin-900.woff') format('woff'), /* Modern Browsers */
-       url('~assets/fonts/outfit-v6-latin-900.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('~assets/fonts/outfit-v6-latin-900.svg#Outfit') format('svg'); /* Legacy iOS */
-}
-
-
 html {
   font-size: .625em; /* fallback IE8+ */
   font-size: calc(1em * .625); /* IE9-IE11 math fixing. See http://bit.ly/1g4X0bX */
@@ -50,12 +15,14 @@ body {
   background: var(--background-color);
   font-size: 1.6rem;
   color: var(--text-color);
-  font-family: 'Outfit', sans-serif;
+  font-family: "Shantell Sans", cursive;
+  font-optical-sizing: auto;
   font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "BNCE" -20, "INFM" 60, "SPAC" 10;
 }
 
 .default {
-  letter-spacing: 0.05rem;
   padding: 1.4rem 2rem;
   height: 100vh;
   display: flex;
@@ -79,6 +46,8 @@ a {
 
 .home-link {
   text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.2rem;
   border-bottom: dotted thin var(--text-color);
 }
 
@@ -100,7 +69,11 @@ h2 {
 
 h1,h2,h3,h4,h5,h6 {
   letter-spacing: 0.02rem;
-  font-weight: 900;
+  font-weight: 800;
+  font-variation-settings:
+    "BNCE" -20,
+    "INFM" 60,
+    "SPAC" 0;
 }
 
 .text-current {
