@@ -23,6 +23,11 @@ export default {
 
 <style>
 #website-themes {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.4rem;
+  text-transform: uppercase;
   cursor: pointer;
 }
 
