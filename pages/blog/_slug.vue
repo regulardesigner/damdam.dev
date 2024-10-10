@@ -7,11 +7,9 @@
     <article>
       <h1 class="article-title">{{ article.title }} <small class="category">{{ article.category }}</small></h1>
 
-      <p>{{ article.description }}</p>
+      <nuxt-content :document="article" class="typeset"/>
 
-      <nuxt-content :document="article" />
-
-      <small>Published: {{ publicationDate(article.createdAt) }}</small>
+      <small>Published: {{ publicationDate(article.publication_date) }}</small>
 
       <prev-next-article :prev="prev" :next="next" />
     </article>
@@ -49,7 +47,7 @@ export default {
   methods: {
     publicationDate(date) {
       const publicationDate = new Date(date)
-      return new Intl.DateTimeFormat('fr-FR').format(publicationDate)
+      return new Intl.DateTimeFormat('en-US').format(publicationDate)
     }
   }
 }
@@ -69,5 +67,10 @@ export default {
   color: #262a36;
   padding: .4rem;
   border-radius: 0.4rem;
+}
+
+.fluid-image {
+  width: 100%;
+  height: auto;
 }
 </style>

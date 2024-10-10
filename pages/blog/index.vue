@@ -1,8 +1,8 @@
 <template>
   <div>
     <navigation />
-    <ul>
-      <li v-for="article in articles" :key="article.slug" class="article-list">
+    <ul class="articles-list">
+      <li v-for="article in articles" :key="article.slug" class="article">
         <nuxt-link class="article-link" :to="{ name: 'blog-slug', params: { slug: article.slug }}">
           <h2 class="title">{{ article.title }}</h2>
           <p class="description">&#10149; {{ article.description }}</p>
@@ -41,6 +41,15 @@ export default {
 </script>
 
 <style>
+.articles-list {
+  padding: 0;
+}
+
+.article {
+  list-style: none;
+  padding-left: 0;
+}
+
 .article-link {
   padding-bottom: 2rem;
   display: block;

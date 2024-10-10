@@ -11,7 +11,7 @@
 
       <nuxt-content :document="note" />
 
-      <small>Published: {{ publicationDate(note.createdAt) }}</small>
+      <small>Published: {{ publicationDate(note.publication_date) }}</small>
 
       <prev-next-article :prev="prev" :next="next" />
     </article>
